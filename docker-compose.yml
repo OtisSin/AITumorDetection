@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  brain-tumor-app:
+    # Собираем образ из текущей папки
+    build: .
+    
+    # Пробрасываем порт 7860 из контейнера
+    ports:
+      - "7860:7860"
+    
+
+    container_name: tumor_detector
+    
+
+    restart: unless-stopped
